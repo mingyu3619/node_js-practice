@@ -19,6 +19,15 @@ https://javafa.gitbooks.io/nodejs_server_basic/content  (클론 코딩)
 
 #### 3. 서버구축하기 - http basic
 
+```
+var server = http.createServer( function(request,response) { 
+
+    response.writeHead(200,{'Content-Type':'text/html'});
+    response.end('Hello node.js!!');
+
+});
+```
+
 ![image](https://user-images.githubusercontent.com/86222639/154005141-cda6e6f6-feaa-4c4c-bd85-f2c2df7d4b33.png)
 
 
@@ -31,3 +40,9 @@ https://javafa.gitbooks.io/nodejs_server_basic/content  (클론 코딩)
 다음 형태로 요청
 
 도메인 이후의 값들을 Queyr String 이라고 한다.
+
+``` javascript
+    var parsedUrl = url.parse(request.url);
+    var parsedQuery = querystring.parse(parsedUrl.query,'&','=');   
+```
+
