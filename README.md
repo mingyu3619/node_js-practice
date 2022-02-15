@@ -42,7 +42,14 @@ var server = http.createServer( function(request,response) {
 도메인 이후의 값들을 Queyr String 이라고 한다.
 
 ``` javascript
-    var parsedUrl = url.parse(request.url);
-    var parsedQuery = querystring.parse(parsedUrl.query,'&','=');   
+    var server = http.createServer(function(request,response){
+        var parsedUrl = url.parse(request.url);
+        var parsedQuery = querystring.parse(parsedUrl.query,'&','=');  
+        console.log(parsedQuery); 
+    }
 ```
+parsedQuery를 이용하면 {키1:'값1' 키2:'값'}의 JSON과 유사한 형태로 반환됩니다.
 
+#### 5. 클라이언트 요청 POST
+
+...
