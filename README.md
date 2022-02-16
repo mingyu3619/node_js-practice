@@ -6,15 +6,15 @@ https://javafa.gitbooks.io/nodejs_server_basic/content  (클론 코딩)
 ### 목차
 
 - [3. 서버구축하기 - http basic](#3-서버구축하기---http-basic)
--[4. 클라이언트 요청 GET](#4-클라이언트-요청-get)
--[5. 클라이언트 요청 POST](#5-클라이언트-요청-post)
--[6. module 사용하기](#6-modeul-사용하기)
--[7. event 처리](#7event-사용하기)
--[8. url 다루기](#8url-다루기)
--[9. 파일입출력](#9파일-입출력)
--[10. Binary 파일(image, mp3) 처리](#10-binary-파일imagemp3-처리)
--[11. Streaming 서비스](#11-streaming-서비스)
--[12,13 MongoDB 연동 I - mongoose](#1213-mongodb-연동)
+- [4. 클라이언트 요청 GET](#4-클라이언트-요청-get)
+- [5. 클라이언트 요청 POST](#5-클라이언트-요청-post)
+- [6. module 사용하기](#6-modeul-사용하기)
+- [7. event 처리](#7event-사용하기)
+- [8. url 다루기](#8url-다루기)
+- [9. 파일입출력](#9파일-입출력)
+- [10. Binary 파일(image, mp3) 처리](#10-binary-파일imagemp3-처리)
+- [11. Streaming 서비스](#11-streaming-서비스)
+- [12,13 MongoDB 연동 I - mongoose](#1213-mongodb-연동)
 
 
 --------------------------------------
