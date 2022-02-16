@@ -6,16 +6,16 @@ https://javafa.gitbooks.io/nodejs_server_basic/content  (클론 코딩)
 ### 목차
 
 - [3. 서버구축하기 - http basic](#3-서버구축하기---http-basic)
-4. 클라이언트 요청 GET
-5. 클라이언트 요청 POST
-6. module 사용하기
-7. event 처리
-8. url 다루기
-9. 파일입출력
-10. Binary 파일(image, mp3) 처리
-11. Streaming 서비스
-12. MongoDB 연동 I - mongoose
-13. MongoDB 연동 II - mongodb
+-[4. 클라이언트 요청 GET](#4-클라이언트-요청-get)
+-[5. 클라이언트 요청 POST](#5-클라이언트-요청-post)
+-[6. module 사용하기](#6-modeul-사용하기)
+-[7. event 처리](#7event-사용하기)
+-[8. url 다루기](#8url-다루기)
+-[9. 파일입출력](#9파일-입출력)
+-[10. Binary 파일(image, mp3) 처리](#10-binary-파일imagemp3-처리)
+-[11. Streaming 서비스](#11-streaming-서비스)
+-[12,13 MongoDB 연동 I - mongoose](#1213-mongodb-연동)
+
 
 --------------------------------------
 ### 3. 서버구축하기 - http basic
@@ -51,7 +51,7 @@ var server = http.createServer( function(request,response) {
 ```
 parsedQuery를 이용하면 {키1:'값1' 키2:'값'}의 JSON과 유사한 형태로 반환됩니다.
 
-#### 5. 클라이언트 요청 POST
+### 5. 클라이언트 요청 POST
 
 http 프로토콜은 브라우저에서 서버로 요청(request)하거나 서버에서 응답(reponse)할때 데이터를 주고 받고, 실제 데이터는 BODY 부분에 담긴다.
 
@@ -69,7 +69,7 @@ http 프로토콜은 브라우저에서 서버로 요청(request)하거나 서�
     });
 ```
 
-#### 6. modeul 사용하기
+### 6. modeul 사용하기
 
 exports  객체를 이용해 외부로 export할 수 있고, 다른 파일에서는 require 객체를 이용해 사용가능
 ```javascript
@@ -81,7 +81,7 @@ exports.func = function(data) {
 exports.var = 'NEW VALUE 100';
 ```
 
-#### 7.event 사용하기
+### 7.event 사용하기
 
 이벤트 처리에 사용되는 node.js 의 주요 객체,함수
 + EventEmitter: node.js의 모든 이벤트 처리가 정의된 기본객체
@@ -112,7 +112,7 @@ module.timer.on('tick', function(time){
 });
 ```
 
-#### 8.URL 다루기
+### 8.URL 다루기
 
 URL이란 Uniform Resource Locator의 약자로 네트워크 상 자원이 어디있는지 알려주기 위한 규약이다.
 ![image](https://user-images.githubusercontent.com/86222639/154179712-57d0d96d-e691-4ed3-b3d6-c70f6a6b995a.png)
@@ -147,7 +147,7 @@ var server = http.createServer(function(request,response){
 /address에 해당되는 page
 ![image](https://user-images.githubusercontent.com/86222639/154180355-aef8124e-ff6f-4325-a3f7-1302c8c32d7f.png)
 
-#### 9.파일 입출력
+### 9.파일 입출력
 
 파일 읽기,쓰기는 둘다 동기/비동기 방식이 있으며 메소드는 다음과 같다.
 ```javascript
@@ -192,7 +192,7 @@ var server = http.createServer(function (request, response) {
 http://localhost/hello 요청 시, hello html 출력
 ![image](https://user-images.githubusercontent.com/86222639/154182405-dd258057-b4ac-40cf-80bd-2e120d7d15fa.png)
 
-#### 10. Binary 파일(image,mp3) 처리
+### 10. Binary 파일(image,mp3) 처리
 
 biarny 파일은 앞의 9. 파일입출력을 이용해 html을 그리는 방식과 유사하다.
 차이점은 MIME (Multipurpose Internet Mail Extensions)이란 인코딩을 이용하는 것 이다.
@@ -227,7 +227,7 @@ var server = http.createServer(function(request,response){
 브라우저 실행 확인
 ![image](https://user-images.githubusercontent.com/86222639/154184621-761ad341-09fb-4f89-b8ae-cf248e7d5fef.png)
 
-#### 11. Streaming 서비스
+### 11. Streaming 서비스
 10.의 readFile의 문제점은 파일을 다 읽었을 때 request.end() 메소드가 실행된다는 것이다. 용량이 큰 동영상의 경우, 데이터 전송이 끝날 때 까지 대기하게 되는 것이다.
 
 이런 단점을 보완하기 위해 stream을 사용하여, 데이터 전송 중간에 처리할 수 있게 한다.
@@ -262,7 +262,7 @@ else if(resource.indexOf('/movie/') == 0){
  콘솔에 찍히는 나누어진 stream data.
 ![image](https://user-images.githubusercontent.com/86222639/154187337-713b7450-ea1a-4971-a3de-aa90b19c2fe0.png)
 
-#### 12,13 MongoDB 연동
+### 12,13 MongoDB 연동
 MongoDB는 문서 지향 데이터 베이스 시스템을 지향하며, schema나 join, table등을 사용하지 않아 다른 RDBMS에 비해 진입 장벽이 낮다. 따라서 NODE.js 기초강의에서 다른 RDBMS보다 자주 사용된다.
 
 여느 DB와 마찬가지로 CRUD 작업이 가능하다.
