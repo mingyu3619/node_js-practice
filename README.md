@@ -5,7 +5,7 @@ https://javafa.gitbooks.io/nodejs_server_basic/content  (클론 코딩)
 
 ### 목차
 
-- [3. 서버구축하기 - http basic] (# 3. 서버구축하기 - http basic)
+- [3. 서버구축하기 - http basic] (# 3-서버구축하기---http-basic)
 4. 클라이언트 요청 GET
 5. 클라이언트 요청 POST
 6. module 사용하기
